@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BFFF</color>
+    <color name="colorPrimaryDark">#00BFFF</color>
+    <color name="colorAccent">#CDDC39</color>
+
+    <!-- app主色调-->
+    <color name="logo_green">#48AB3C</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="nav_bar">#FFFAFA</color>
+</resources>

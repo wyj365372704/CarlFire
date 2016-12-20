@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="navigation_bar">
+        <attr name="textSize" format="dimension" />
+        <attr name="textSelectedColor" format="color" />
+        <attr name="textUnSelectedColor" format="color" />
+        <attr name="iconWidth" format="dimension" />
+        <attr name="iconHeight" format="dimension" />
+    </declare-styleable>
+    
+    <dimen name="navigation_bar_textSize">14sp</dimen>
+    <color name="navigation_bar_textSelectedColor">#ff0000</color>
+    <color name="navigation_bar_textUnSelectedColor">#0000ff</color>
+    <dimen name="navigation_bar_iconWidth">28dp</dimen>
+    <dimen name="navigation_bar_iconHeight">28dp</dimen>
+</resources>
