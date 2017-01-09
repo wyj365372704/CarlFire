@@ -1,8 +1,21 @@
 package com.app.commonlib.net.tools;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
+import java.util.Objects;
+
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okio.Buffer;
+import okio.BufferedSink;
+import okio.Okio;
+import okio.Source;
 
 public class Tools {
     /**
@@ -37,5 +50,64 @@ public class Tools {
             urlFull.deleteCharAt(urlFull.length() - 1);
         }
         return urlFull.toString();
+    }
+
+    /**
+     * @param params
+     * @return
+     */
+    protected static RequestBody getFormRequest(Map<String, String> params) {
+        FormBody.Builder builder = new FormBody.Builder();
+        if (params != null && params.size() > 0) {
+            for (Map.Entry<String, String> param : params.entrySet()) {
+                String key = param.getKey();
+                String value = param.getValue();
+                builder.add(key, value);
+            }
+        }
+        return builder.build();
+    }
+
+    protected static RequestBody getMultipartRequest(Map<String, Object> params, final ProgressNetListener listener) {
+        final MultipartBody.Builder builder = new MultipartBody.Builder();
+        builder.setType(MultipartBody.FORM);
+
+        if (params != null && params.size() > 0) {
+            for (Map.Entry<String, Object> param : params.entrySet()) {
+                String key = param.getKey();
+                Object value = param.getValue();
+                if (!(value instanceof File)) {
+                    builder.addFormDataPart(key, value.toString());
+                } else {
+                    final File file = (File) value;
+                    builder.addFormDataPart(key, file.getName(), new RequestBody() {
+                        @Override
+                        public MediaType contentType() {
+                            return MultipartBody.FORM;
+                        }
+
+                        @Override
+                        public void writeTo(BufferedSink sink) throws IOException {
+                            Source source ;
+                            try {
+                                source = Okio.source(file);
+                                Buffer buffer = new Buffer();
+                                long current = 0;
+                                for (long readCount; (readCount = source.read(buffer, 2048)) != -1; ) {
+                                    sink.write(buffer, readCount);
+                                    current += readCount;
+                                    if(listener!=null){
+                                        listener.onProgress(file.getName(),current,file.length());
+                                    }
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                }
+            }
+        }
+        return builder.build();
     }
 }

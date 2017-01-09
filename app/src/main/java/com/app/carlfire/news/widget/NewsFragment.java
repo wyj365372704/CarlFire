@@ -29,7 +29,6 @@ public class NewsFragment extends BaseFragment<NewsPresenter> implements NewsVie
 
     private MyViewPagerAdapter myViewPagerAdapter;
     private String TAG = this.getClass().getSimpleName();
-    private boolean state = true;
 
     public static NewsFragment newInstance() {
         Bundle args = new Bundle();

@@ -2,22 +2,15 @@ package com.app.carlfire.main.widget;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
+import android.graphics.Color;
 import android.os.Build;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 
+import com.app.carlfire.StatusBarCompat;
 import com.app.carlfire.news.adapter.MyViewPagerAdapter;
 import com.app.carlfire.news.widget.NewsFragment;
 import com.app.carlfire.R;
@@ -85,6 +78,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
 //        outState.putInt("navigation_index", mTableLayout.getCurrentTabIndex());
     }
 
+    /**
+     * EventBus 回调,ScrollAwareFABBehavior为调用者
+     * @param event
+     */
     @Override
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void showOrHideNavigationBar(Boolean event) {
