@@ -6,9 +6,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseRecyclerViewAdapter;
 import com.app.carlfire.beans.PhotoGirl;
-import com.app.commonlib.img.ImageLoadEngine;
+import com.app.commonlib.base.BaseRecyclerViewAdapter;
+import com.app.commonlib.img.ImageLoader;
 
 /**
  * Created by Carl on 2016-12-08 008.
@@ -17,7 +17,7 @@ import com.app.commonlib.img.ImageLoadEngine;
 public class PhotoAdapter extends BaseRecyclerViewAdapter<PhotoGirl, PhotoAdapter.PhotoViewHolder> {
     @Override
     protected void bindDataToItemView(PhotoViewHolder viewHolder, PhotoGirl item) {
-        ImageLoadEngine.loadImage(viewHolder.itemView.getContext(), item.getUrl(), viewHolder.imageView);
+        ImageLoader.loadImage(viewHolder.itemView.getContext(), item.getUrl(), viewHolder.imageView);
     }
 
     @Override

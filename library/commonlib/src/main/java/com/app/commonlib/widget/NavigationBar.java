@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -30,7 +29,7 @@ public class NavigationBar extends LinearLayout {
     private float iconWidth;//导航条图片宽度
     private float iconHeight;//导航条图片高度
 
-    private List<TabEntity> mTabEntitys = new ArrayList<>();
+    private List<TabEntity> mTabEntities = new ArrayList<>();
     private ViewPager mViewPager;
     private String TAG = this.getClass().getSimpleName();
 
@@ -68,8 +67,8 @@ public class NavigationBar extends LinearLayout {
     }
 
     private void inflateView() {
-        for (int i = 0; i < mTabEntitys.size(); i++) {
-            TabEntity tabEntity = mTabEntitys.get(i);
+        for (int i = 0; i < mTabEntities.size(); i++) {
+            TabEntity tabEntity = mTabEntities.get(i);
 
             LinearLayout tabItem = new LinearLayout(getContext());
             tabItem.setOrientation(LinearLayout.VERTICAL);
@@ -148,8 +147,8 @@ public class NavigationBar extends LinearLayout {
 
     public void setupWithViewPager(ViewPager viewPager, List<TabEntity> entities) {
         this.mViewPager = viewPager;
-        entities.removeAll(mTabEntitys);
-        mTabEntitys.addAll(entities);
+        entities.removeAll(mTabEntities);
+        mTabEntities.addAll(entities);
         inflateView();
         inflateListener();
 
@@ -184,10 +183,10 @@ public class NavigationBar extends LinearLayout {
             ImageView imageView = (ImageView) item.getChildAt(0);
             TextView textView = (TextView) item.getChildAt(1);
             if (i == index) {
-                imageView.setImageResource(mTabEntitys.get(i).getSelectedIcon());
+                imageView.setImageResource(mTabEntities.get(i).getSelectedIcon());
                 textView.setTextColor(textSelectedColor);
             } else {
-                imageView.setImageResource(mTabEntitys.get(i).getUnSelectedIcon());
+                imageView.setImageResource(mTabEntities.get(i).getUnSelectedIcon());
                 textView.setTextColor(textUnSelectedColor);
             }
         }

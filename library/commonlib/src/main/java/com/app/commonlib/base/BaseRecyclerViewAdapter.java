@@ -1,4 +1,4 @@
-package com.app.carlfire.base;
+package com.app.commonlib.base;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.app.carlfire.R;
+import com.app.commonlib.R;
 
 import java.util.ArrayList;
 import java.util.List;

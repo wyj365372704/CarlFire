@@ -11,7 +11,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
  * Created by Carl on 2016-12-09 009.
  */
 
-public class ImageLoadEngine {
+public class ImageLoader {
     public static void loadImage(Context context, String url, ImageView targetImageView) {
         loadImage(context, url, targetImageView, R.mipmap.ic_image_loading, R.mipmap.ic_empty_picture);
     }

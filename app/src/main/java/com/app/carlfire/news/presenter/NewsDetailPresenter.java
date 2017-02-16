@@ -1,8 +1,8 @@
 package com.app.carlfire.news.presenter;
 
-import com.app.carlfire.base.BaseMvpPresenter;
 import com.app.carlfire.news.model.NewsDetailModel;
 import com.app.carlfire.news.mvpview.NewsDetailView;
+import com.app.commonlib.base.BaseMvpPresenter;
 
 /**
  * Created by Carl on 2016-12-15 015.

@@ -1,6 +1,6 @@
 package com.app.carlfire.news.model;
 
-import com.app.carlfire.base.BaseMvpModel;
+import com.app.commonlib.base.BaseMvpModel;
 
 /**
  * Created by Carl on 2016-12-15 015.

@@ -1,11 +1,11 @@
 package com.app.carlfire.news.presenter;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseMvpPresenter;
 import com.app.carlfire.beans.NewsBean;
 import com.app.carlfire.news.model.NewsListModel;
 import com.app.carlfire.net.Urls;
 import com.app.carlfire.news.mvpview.NewsListView;
+import com.app.commonlib.base.BaseMvpPresenter;
 
 import java.util.List;
 

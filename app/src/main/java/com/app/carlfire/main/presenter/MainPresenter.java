@@ -1,10 +1,8 @@
 package com.app.carlfire.main.presenter;
 
-import android.support.annotation.NonNull;
-
-import com.app.carlfire.base.BaseMvpModel;
-import com.app.carlfire.base.BaseMvpPresenter;
 import com.app.carlfire.main.mvpview.MainView;
+import com.app.commonlib.base.BaseMvpModel;
+import com.app.commonlib.base.BaseMvpPresenter;
 
 /**
  * Created by Carl on 2016-12-01 001.

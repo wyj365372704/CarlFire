@@ -1,7 +1,7 @@
 package com.app.carlfire.news.mvpview;
 
-import com.app.carlfire.base.BaseMvpView;
 import com.app.carlfire.beans.NewsBean;
+import com.app.commonlib.base.BaseMvpView;
 
 import java.util.List;
 

@@ -3,21 +3,19 @@ package com.app.carlfire.main.widget;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.app.carlfire.StatusBarCompat;
 import com.app.carlfire.news.adapter.MyViewPagerAdapter;
 import com.app.carlfire.news.widget.NewsFragment;
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseActivity;
 import com.app.carlfire.main.mvpview.MainView;
 import com.app.carlfire.main.presenter.MainPresenter;
 import com.app.carlfire.photo.widget.PhotoFragment;
+import com.app.commonlib.base.BaseActivity;
 import com.app.commonlib.widget.NavigationBar;
 
 import org.greenrobot.eventbus.EventBus;

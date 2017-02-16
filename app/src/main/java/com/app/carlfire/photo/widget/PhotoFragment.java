@@ -6,12 +6,12 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.widget.Toast;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseFragment;
-import com.app.carlfire.base.PowerfulRecyclerView;
 import com.app.carlfire.beans.PhotoGirl;
 import com.app.carlfire.photo.adapter.PhotoAdapter;
 import com.app.carlfire.photo.mvpview.PhotoView;
 import com.app.carlfire.photo.presenter.PhotoPresenter;
+import com.app.commonlib.base.BaseFragment;
+import com.app.commonlib.base.PowerfulRecyclerView;
 
 import java.util.List;
 

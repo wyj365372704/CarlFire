@@ -2,11 +2,11 @@ package com.app.carlfire.photo.presenter;
 
 import android.util.Log;
 
-import com.app.carlfire.base.BaseMvpPresenter;
 import com.app.carlfire.beans.PhotoGirl;
 import com.app.carlfire.net.Urls;
 import com.app.carlfire.photo.model.PhotoModel;
 import com.app.carlfire.photo.mvpview.PhotoView;
+import com.app.commonlib.base.BaseMvpPresenter;
 
 import java.util.List;
 

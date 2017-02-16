@@ -1,4 +1,4 @@
-package com.app.carlfire.base;
+package com.app.commonlib.base;
 
 /**
  * 基础数据层model接口

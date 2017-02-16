@@ -1,4 +1,4 @@
-<com.app.carlfire.base.PowerfulRecyclerView
+<com.app.commonlib.base.PowerfulRecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/news_list_rv"
     android:layout_width="match_parent"

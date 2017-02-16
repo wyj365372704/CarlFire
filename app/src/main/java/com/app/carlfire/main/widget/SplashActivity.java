@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.app.carlfire.R;
 import com.app.carlfire.StatusBarCompat;
-import com.app.carlfire.base.BaseActivity;
-import com.app.carlfire.base.BaseMvpPresenter;
+import com.app.commonlib.base.BaseActivity;
+import com.app.commonlib.base.BaseMvpPresenter;
 
 import butterknife.BindView;
 

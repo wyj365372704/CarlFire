@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseRecyclerViewAdapter;
 import com.app.carlfire.beans.NewsBean;
-import com.app.commonlib.img.ImageLoadEngine;
+import com.app.commonlib.base.BaseRecyclerViewAdapter;
+import com.app.commonlib.img.ImageLoader;
 
 /**
  * Created by Carl on 2016-12-01 001.
@@ -24,7 +24,7 @@ public class NewsListAdapter extends BaseRecyclerViewAdapter<NewsBean,NewsListAd
 
     @Override
     protected void bindDataToItemView(NewsViewHolder viewHolder, NewsBean item) {
-        ImageLoadEngine.loadImage(viewHolder.itemView.getContext(),item.getImgsrc(),viewHolder.mImageView);
+        ImageLoader.loadImage(viewHolder.itemView.getContext(),item.getImgsrc(),viewHolder.mImageView);
         viewHolder.mTitleTextView.setText(item.getTitle());
         viewHolder.mDescTextView.setText(item.getDigest());
         viewHolder.mPublishTime.setText(item.getPtime());

@@ -1,29 +1,24 @@
-package com.app.commonlib.net.tools;
+package com.app.commonlib.net;
 
-import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
+import com.app.commonlib.net.listener.NetListener;
+import com.app.commonlib.net.listener.ProgressNetListener;
 import com.app.commonlib.net.parser.RespParser;
 
 import org.json.JSONException;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class NetWorkAccessEngine {
@@ -32,7 +27,7 @@ public class NetWorkAccessEngine {
 
     private OkHttpClient mHttpClient;
     private Handler mHandler;
-    private String TAG = NetWorkAccessEngine.class.getSimpleName();
+    private String TAG = this.getClass().getSimpleName();
 
     private NetWorkAccessEngine() {
         mHttpClient = new OkHttpClient.Builder()
@@ -197,7 +192,7 @@ public class NetWorkAccessEngine {
         });
         return call;
     }
-    public String saveFile(Response response) throws IOException {
+   /* public String saveFile(Response response) throws IOException {
         InputStream is = null;
         byte[] buf = new byte[1024];
         int len = 0;
@@ -235,6 +230,6 @@ public class NetWorkAccessEngine {
             } catch (IOException e) {
             }
         }
-    }
+    }*/
 
 }

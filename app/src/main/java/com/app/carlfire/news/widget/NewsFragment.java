@@ -8,13 +8,13 @@ import android.util.Log;
 import android.view.View;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseFragment;
 import com.app.carlfire.main.mvpview.MainView;
 import com.app.carlfire.main.widget.MainActivity;
 import com.app.carlfire.news.adapter.MyViewPagerAdapter;
 import com.app.carlfire.news.mvpview.NewsListView;
 import com.app.carlfire.news.mvpview.NewsView;
 import com.app.carlfire.news.presenter.NewsPresenter;
+import com.app.commonlib.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;

@@ -6,12 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.widget.Toast;
 
 import com.app.carlfire.R;
-import com.app.carlfire.base.BaseFragment;
-import com.app.carlfire.base.PowerfulRecyclerView;
 import com.app.carlfire.beans.NewsBean;
 import com.app.carlfire.news.adapter.NewsListAdapter;
 import com.app.carlfire.news.mvpview.NewsListView;
 import com.app.carlfire.news.presenter.NewsListPresenter;
+import com.app.commonlib.base.BaseFragment;
+import com.app.commonlib.base.PowerfulRecyclerView;
 
 import java.util.List;
 

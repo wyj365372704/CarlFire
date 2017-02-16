@@ -1,16 +1,16 @@
-package com.app.commonlib.net.tools;
+package com.app.commonlib.net;
+
+import com.app.commonlib.net.listener.ProgressNetListener;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
-import java.util.Objects;
 
 import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
-import okhttp3.Request;
 import okhttp3.RequestBody;
 import okio.Buffer;
 import okio.BufferedSink;

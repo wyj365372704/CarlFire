@@ -1,10 +1,10 @@
 package com.app.carlfire.photo.model;
 
-import com.app.carlfire.base.BaseMvpModel;
 import com.app.carlfire.beans.PhotoGirl;
 import com.app.carlfire.net.parser.PhotoParser;
-import com.app.commonlib.net.tools.NetListener;
-import com.app.commonlib.net.tools.NetWorkAccessEngine;
+import com.app.commonlib.base.BaseMvpModel;
+import com.app.commonlib.net.listener.NetListener;
+import com.app.commonlib.net.NetWorkAccessEngine;
 
 import java.util.List;
 
